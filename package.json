@@ -1,0 +1,28 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000S\u0000C\u0000H\u0000O\u0000O\u0000L\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sga-encoder/SCHOOL.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  "author": "sga-encoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sga-encoder/SCHOOL/issues"
+  },
+  "homepage": "https://github.com/sga-encoder/SCHOOL#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
