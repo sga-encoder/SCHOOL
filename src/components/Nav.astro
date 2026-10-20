@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import taco from '../assets/taco.png';
+
+const links = [
+  { href: '#nosotros', label: 'Nosotros' },
+  { href: '#galeria', label: 'Galería' },
+  { href: '#contacto', label: 'Contacto' },
+];
+---
+
+<header class="NAV" id="nav">
+  <a href="#inicio" class="NAV__LOGO">
+    <Image src={taco} alt="" width={36} height={36} />
+    <span>Padrísimo</span>
+  </a>
+  <button class="NAV__TOGGLE" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="NAV__MENU" id="nav-menu">
+    {links.map(({ href, label }) => <a href={href}>{label}</a>)}
+    <a href="http://wa.me/+573193054761" class="BTN BTN--SMALL" target="_blank" rel="noopener noreferrer">Reservar</a>
+  </nav>
+</header>
+
+<script>
+  const nav = document.getElementById('nav')!;
+  const toggle = document.getElementById('nav-toggle')!;
+  const menu = document.getElementById('nav-menu')!;
+
+  const setMenu = (open: boolean) => {
+    nav.classList.toggle('OPEN', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  };
+
+  toggle.addEventListener('click', () => setMenu(!nav.classList.contains('OPEN')));
+  menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+
+  const onScroll = () => nav.classList.toggle('SCROLLED', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>

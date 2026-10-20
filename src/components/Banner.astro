@@ -1,0 +1,10 @@
+---
+import { getImage } from 'astro:assets';
+import bannerImage from '../assets/Image02.jpg';
+
+const bg = await getImage({ src: bannerImage, width: 1920, format: 'webp', quality: 60 });
+---
+
+<div class="BANNER" role="img" aria-label="Tacos mexicanos" style={`--bg-image: url('${bg.src}')`}>
+  <p>“La vida es mejor con tacos”</p>
+</div>

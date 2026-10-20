@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/Image01.jpg';
+---
+
+<section class="HERO" id="inicio">
+  <Image
+    src={heroImage}
+    alt="Platos de comida mexicana"
+    class="HERO__BG"
+    widths={[640, 1024, 1600, 2000]}
+    sizes="100vw"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="HERO__CONTENT">
+    <p class="HERO__KICKER">Restaurante mexicano</p>
+    <h1>PADRÍSIMO</h1>
+    <p class="HERO__TEXT">El auténtico sabor de México, servido con cariño.</p>
+    <div class="HERO__ACTIONS">
+      <a href="#contacto" class="BTN">Visítanos</a>
+      <a href="#galeria" class="BTN BTN--GHOST">Ver platos</a>
+    </div>
+  </div>
+  <svg class="WAVE" viewBox="0 0 900 100" preserveAspectRatio="none" aria-hidden="true">
+    <ellipse cx="450" cy="100" rx="460" ry="50"></ellipse>
+  </svg>
+</section>

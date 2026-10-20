@@ -1,11 +1,14 @@
 {
   "name": "school",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000S\u0000C\u0000H\u0000O\u0000O\u0000L\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "description": "Padrísimo, restaurante mexicano en Manizales",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server public"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
@@ -14,7 +17,8 @@
   "keywords": [
     "HTML",
     "CSS",
-    "JS"
+    "JS",
+    "Astro"
   ],
   "author": "sga-encoder",
   "license": "ISC",
@@ -23,6 +27,6 @@
   },
   "homepage": "https://github.com/sga-encoder/SCHOOL#readme",
   "dependencies": {
-    "live-server": "^1.2.2"
+    "astro": "^7.4.1"
   }
 }

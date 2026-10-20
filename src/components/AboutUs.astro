@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import taco from '../assets/taco.png';
+
+const features = [
+  { icon: 'fa-solid fa-pepper-hot', label: 'Recetas tradicionales' },
+  { icon: 'fa-solid fa-leaf', label: 'Ingredientes frescos' },
+  { icon: 'fa-solid fa-heart', label: 'Ambiente familiar' },
+];
+---
+
+<section class="ABOUT_US" id="nosotros">
+  <div class="CONTAINER">
+    <div class="ABOUT_US__TEXT">
+      <h2>QUIÉNES SOMOS</h2>
+      <p>
+        Somos un rincón de México en el corazón de la ciudad. Preparamos cada plato con recetas tradicionales,
+        ingredientes frescos y mucho sabor: tacos, burritos, nachos y más, para compartir en familia o con amigos.
+      </p>
+      <ul class="ABOUT_US__FEATURES">
+        {features.map(({ icon, label }) => (
+          <li><i class={icon} aria-hidden="true"></i> {label}</li>
+        ))}
+      </ul>
+    </div>
+    <Image src={taco} alt="Ilustración de un taco" class="ABOUT_US__IMG" width={512} height={512} />
+  </div>
+</section>
